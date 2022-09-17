@@ -45,6 +45,7 @@ app.patch('/add/customer/update/:phone', (req, res) => {
     console.log(remainingCustomer, 'remainingCustomer')
     const updatedCustomer = [...remainingCustomer, customer]
     saveCustomer(updatedCustomer)
+    res.send(customer)
   }
 })
 
